@@ -1,0 +1,11 @@
+{
+  // Desativa sugestões inline de extensões tipo Copilot (se a extensão respeitar esta chave)
+  "github.copilot.inlineSuggest.enable": false,
+
+  // Desativa quick suggestions do editor (autocompletar automático em strings, comentários e outros)
+  "editor.quickSuggestions": { "other": false, "comments": false, "strings": false },
+  "editor.suggestOnTriggerCharacters": false,
+  // Desativa as sugestões inline integradas no editor (definitivo para a maioria das fontes)
+  "editor.inlineSuggest.enabled": false,
+  "editor.acceptSuggestionOnEnter": "off"
+}

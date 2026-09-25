@@ -238,7 +238,7 @@ perimetroF (Triangulo p1 p2 p3) = let a = distancia p1 p2
 
 -- a) _isLower :: Char -> Bool, que testa se um Char é uma minúscula.
 _isLower :: Char -> Bool
-_isLower x | val <= 122 & val >= 97 = True
+_isLower x | val <= 122 && val >= 97 = True
            | otherwise = False
                 where val = ord x
 
