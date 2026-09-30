@@ -45,9 +45,7 @@ numOcorre x (h:t) | x == h = 1 + numOcorre x t
 
 -- c)
 positivos :: [Int] -> Bool
-positivos [] = False
-positivos [x]   | x >= 0 = True
-                | otherwise = False
+positivos [] = True
 positivos (h:t) | h >= 0 = positivos t
                 | otherwise = False
 
@@ -149,8 +147,7 @@ simp ((h1,h2):t) | h1 == 0 = simp t
 -- g)
 mult :: Monomio -> Polinomio -> Polinomio
 mult _ [] = []
-mult (c,e) ((h1,h2):t) | e == h2 = (c + h1, h2) : mult (c,e) t
-                       | otherwise = mult (c,e) t
+mult (c,e) ((h1,h2):t) = (c * h1, e + h2) : mult (c,e) t
 
 -- h)
 adicionaMonomio :: Monomio -> Polinomio -> Polinomio
